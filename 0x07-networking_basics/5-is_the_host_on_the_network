@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# script to ping
+
+if [$# -ne 1]
+	then
+		echo "usage: filename <ip address>"
+		exit 1
+fi
+ip=$1
+ping -c 5 "$ip"
