@@ -2,6 +2,6 @@
 # script that displays "best School" 10 times using until loop
 count=1
 until [ $count -gt 10 ]; do
-    echo "best School"
-    let count=count+1
+      echo "best School"
+      let count=count+1
 done

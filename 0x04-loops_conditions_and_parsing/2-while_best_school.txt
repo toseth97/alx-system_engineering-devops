@@ -2,6 +2,6 @@
 # Script to display "best School" 10 times using while loop
 i=0
 while [ $i -lt 10 ]; do
-    echo "best School"
-    let i=i+1
+      echo "best School"
+      let i=i+1
 done
