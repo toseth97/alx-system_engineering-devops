@@ -1,25 +1,21 @@
-# 0x0F. Load balancer
+# Load balancer
 
----
-## Description
+In this project, I continued to build up the configuration of the web server
+issued in project 0x0B. I was issued two additional servers, one to replicate
+the Nginx configuration of my original server, and another to set up an HAproxy
+load balancer on to manage both web servers.
 
-This project in the System engineering & DevOps ― Web stack series is about:
-* Adding a new web server
-* Add and configure loading balancer software/hardware
-* Understanding load balancing algorithms
+## Tasks :page_with_curl:
 
-## Files
----
-File|Task
----|---
-0-custom_http_response-header | Script to add and configure another webserver
-1-install_load_balancer | Script to install and configure HAproxy on lb-01
+* **0. Double the number of webservers**
+  * [0-custom_http_response_header](./0-custom_http_response-header): Bash
+  script that installs and configures Nginx on a server with a custom HTTP
+  response header.
+    * The name of the HTTP header is `X-Served-By`.
+    * The value of the HTTP header is the hostname of the server.
 
-## Directories
----
-Directory Name | Description
----|---
-0x0F-load_balancer | main folder with scripts
-
-## Author
-Heindrick Cheung
+* **1. Install your load balancer**
+  * [1-install_load_balancer](./1-install_load_balancer): Bash script that
+  installs and configures HAproxy version 1.5 on a server.
+    * Enables management via the init script.
+    * Requests are distributed using a round-robin algorithm.

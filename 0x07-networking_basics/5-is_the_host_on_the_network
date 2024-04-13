@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# script to ping
+# Pings an IP address received as a string argument 5 times.
 
-if [$# -ne 1]
-	then
-		echo "usage: filename <ip address>"
-		exit 1
+if [ "$#" -eq 0 ]
+then
+  echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+  ping -c 5 "$1"
 fi
-ip=$1
-ping -c 5 "$ip"

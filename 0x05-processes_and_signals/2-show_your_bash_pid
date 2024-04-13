@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Script to display lin containing the bash word, cannot use pgrep
+# Displays a list of currently running processes containing the bash keyword.
 # shellcheck disable=SC2009
-ps -auxf | grep bash
+
+ps -aux | grep bash

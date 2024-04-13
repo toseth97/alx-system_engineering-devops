@@ -1,4 +1,4 @@
+# ssh config file
 Host *
-	IdentityFile ~/.ssh/school
-	PasswordAuthentication no
-	BatchMode yes
+      PasswordAuthentication no
+      IdentifyFile ~/.ssh/school
